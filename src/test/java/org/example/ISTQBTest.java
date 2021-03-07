@@ -67,7 +67,7 @@ public class ISTQBTest {
         mainPage.clickEnterBtn();
 
         String results = resultPage.getNumberOfResults();
-        Assert.assertEquals(ConfProperties.getProperty("oNumberOfResults"), results);
+        Assert.assertNotEquals(ConfProperties.getProperty("oNumberOfResults"), results);
 
         resultPage.clickSearchPage(); //JavascriptExecutor is inside
 
